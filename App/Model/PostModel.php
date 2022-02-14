@@ -13,7 +13,7 @@ class PostModel
     {
         $sql = "select * from posts";
         $stmt = $this->connect->query($sql);
-        return $stmt->fetchAll();
+        return $stmt->fetchAll(\PDO::FETCH_OBJ);
 
     }
 

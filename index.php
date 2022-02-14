@@ -7,8 +7,7 @@ use App\Controller\PostController;
 
 //$postModel = new PostModel();
 //var_dump($postModel->getAll());
-$postController = new PostController();
-var_dump($postController->getAllPost());
+$postController = new PostController();$postController->getAllPost();
 
 
 ?>
