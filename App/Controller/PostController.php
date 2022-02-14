@@ -13,6 +13,7 @@ class PostController
 
     public function getAllPost()
     {
-        return $this->postModel->getAll();
+       $posts = $this->postModel->getAll();
+       include "App/View/post/list.php";
     }
 }
