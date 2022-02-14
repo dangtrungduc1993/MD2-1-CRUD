@@ -1,3 +1,4 @@
+<a href="index.php?page=post-create">Create</a>
 <table border="10">
     <thead>
     <tr>

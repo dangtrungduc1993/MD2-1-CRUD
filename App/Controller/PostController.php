@@ -19,5 +19,19 @@ class PostController
     public function getPostById($id){
         $post= $this->postModel->getById($id);
         include "App/View/post/detail.php";
+
+    }
+    public function createPost(){
+      if ($_SERVER["REQUEST_METHOD"]== "GET"){
+          include "App/View/post/create.php";
+      }
+      else {
+          $data=[
+              "title"=>$_REQUEST["title"],
+              "content"=>$_REQUEST["content"]
+          ];
+          $this->postModel->create($data);
+          header("location:index.php?page=post-list");
+      }
     }
 }

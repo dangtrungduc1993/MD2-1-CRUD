@@ -30,6 +30,9 @@ switch ($page) {
         $id=$_GET["id"];
         $postController->getPostById($id);
         break;
+    case "post-create":
+        $postController->createPost();
+        break;
     default:
 }
 

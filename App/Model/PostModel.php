@@ -21,5 +21,16 @@ class PostModel
         $stmt = $this->connect->query($sql);
         return $stmt->fetch(\PDO::FETCH_OBJ);
     }
+    public function create($post){
+        $sql="Insert into posts(title, content) values (?,?)";
+        $stmt= $this->connect->prepare($sql);
+        $stmt->bindParam(1,$post['title']);
+        $stmt->bindParam(2,$post['content']);
+        $stmt->execute();
+
+    }
+    public function delete($id){
+
+    }
 
 }
