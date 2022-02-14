@@ -1,4 +1,5 @@
 <a href="index.php?page=post-create">Create</a>
+
 <table border="10">
     <thead>
     <tr>
@@ -14,6 +15,7 @@
         <td><?php echo $post->title ?></td>
         <td><?php echo $post->content ?></td>
         <td><a href="index.php?page=post-detail&id=<?php echo $post->id?>">Detail</a></td>
+        <td><a onclick="return confirm('Ban co muon xoa no khong?')" href="index.php?page=post-delete&id=<?php echo $post->id?>">Delete</a></td>
     </tr>
     <?php endforeach; ?>
     </tbody>

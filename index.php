@@ -33,6 +33,9 @@ switch ($page) {
     case "post-create":
         $postController->createPost();
         break;
+    case "post-delete":
+        $postController->deletePost($_GET["id"]);
+        break;
     default:
 }
 

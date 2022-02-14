@@ -30,6 +30,8 @@ class PostModel
 
     }
     public function delete($id){
+        $sql="delete from posts where id=$id";
+        $this->connect->query($sql);
 
     }
 

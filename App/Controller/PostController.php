@@ -34,4 +34,9 @@ class PostController
           header("location:index.php?page=post-list");
       }
     }
+    public function deletePost($id){
+        $this->postModel->delete($id);
+        header("location:index.php?page=post-list");
+
+    }
 }
