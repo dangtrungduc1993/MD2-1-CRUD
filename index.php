@@ -26,6 +26,10 @@ switch ($page) {
     case "post-list":
         $postController->getAllPost();
         break;
+    case "post-detail":
+        $id=$_GET["id"];
+        $postController->getPostById($id);
+        break;
     default:
 }
 

@@ -16,4 +16,8 @@ class PostController
        $posts = $this->postModel->getAll();
        include "App/View/post/list.php";
     }
+    public function getPostById($id){
+        $post= $this->postModel->getById($id);
+        include "App/View/post/detail.php";
+    }
 }

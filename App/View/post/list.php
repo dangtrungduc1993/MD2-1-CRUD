@@ -12,6 +12,7 @@
         <td><?php echo $post->id ?></td>
         <td><?php echo $post->title ?></td>
         <td><?php echo $post->content ?></td>
+        <td><a href="index.php?page=post-detail&id=<?php echo $post->id?>">Detail</a></td>
     </tr>
     <?php endforeach; ?>
     </tbody>

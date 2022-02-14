@@ -16,5 +16,10 @@ class PostModel
         return $stmt->fetchAll(\PDO::FETCH_OBJ);
 
     }
+    public function getById($id){
+        $sql = "select * from posts where id = $id";
+        $stmt = $this->connect->query($sql);
+        return $stmt->fetch(\PDO::FETCH_OBJ);
+    }
 
 }
